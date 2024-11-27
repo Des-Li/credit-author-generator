@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRediT Author Statement Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+    td {
+      font-size: 14px;
+    }
+    /* Style for larger checkboxes */
+    input[type="checkbox"] {
+      width: 25px; /* Increase the width */
+      height: 25px; /* Increase the height */
+    }
+    /* Bold the author's name and colon in the output */
+    .output p strong {
+      font-weight: bold;
+    }
+    .button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+    .output {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>CRediT Author Statement Generator</h1>
+
+    <!-- Table Setup -->
+    <table id="credit-table">
+      <thead>
+        <tr>
+          <th>CRediT Role</th>
+          <th>Description</th>
+          <!-- Authors will be added dynamically -->
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Rows for the 14 CRediT items will be generated dynamically -->
+      </tbody>
+    </table>
+
+    <!-- Buttons to add authors and generate statement -->
+    <button class="button" onclick="addAuthor()">Add Another Author</button>
+    <button class="button" onclick="generateStatement()">Generate Statement</button>
+
+    <!-- Output area for the generated CRediT statement -->
+    <div class="output" id="output"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
